@@ -93,6 +93,8 @@ namespace CHM2HTML
         static void CopyToDist()
         {
             DirectoryCopy(tmpDir, distDir, true);
+
+            DirectoryCopy(Path.Combine(Application.StartupPath, "css"), distDir, true);
             try
             {
                 Directory.Delete(tmpDir, true);
